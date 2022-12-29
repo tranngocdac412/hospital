@@ -11,6 +11,14 @@
         </field>
     </record>
 
+    <record id="open_patient_appointments" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">hospital.appointment</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('patient_id', '=', active_id)]</field>
+        <field name="context">{}</field>
+    </record>
+
     <record id="patient_tree" model="ir.ui.view">
         <field name="name">hospital.patient.tree</field>
         <field name="model">hospital.patient</field>
@@ -34,24 +42,30 @@
             <form string="Patients">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button name="open_patient_appointment" type="object"
+                        <button name="open_patient_appointments" type="object"
                                 class="oe_stat_button" icon="fa-calendar">
-                            <field name="appointment_count" widget="statinfo"></field>
+                            <field name="appointment_count" string="A" widget="statinfo"/>
+                        </button>
+
+                        <button name="%(open_patient_appointments)d" type="action"
+                                class="oe_stat_button" icon="fa-usd">
+                            <field name="appointment_count" string="Appointments" widget="statinfo"/>
                         </button>
                     </div>
                     <field name="image" widget="image" class="oe_avatar"/>
                     <div class="oe_title">
                         <h1>
                             <field name="patient_name"/>
-                            <field name="id"/>
                         </h1>
                     </div>
                     <group>
                         <group>
+                            <field name="id"/>
                             <field name="patient_age"/>
                             <field name="gender"/>
                         </group>
                         <group>
+<!--                            <field name="appointment_count" string="ACount"/>-->
                             <field name="name"/>
                             <field name="age_group"/>
                             <field name="name_seq"/>

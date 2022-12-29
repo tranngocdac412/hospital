@@ -12,7 +12,7 @@ class HospitalPatient(models.Model):
     _rec_name = 'patient_name'
     _order = 'patient_name'
 
-    def open_patient_appointment(self):
+    def open_patient_appointments(self):
         return {
             'name': _('Appointment'),
             'domain': [('patient_id', '=', self.id)],
@@ -24,8 +24,9 @@ class HospitalPatient(models.Model):
         }
 
     def get_appointment_count(self):
-        count = self.env['hospital.appointment'].search_count([('patient_id', '=', self.id)])
-        self.appointment_count = count
+        for record in self:
+            count = record.env['hospital.appointment'].search_count([('patient_id', '=', self.id)])
+            record.appointment_count = count
 
     patient_name = fields.Char('Name', required=True)
     patient_age = fields.Integer('Age', track_visibility='always')
