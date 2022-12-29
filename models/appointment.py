@@ -12,8 +12,7 @@ class HospitalAppointment(models.Model):
         hospital = self.env['hospital.patient'].sudo().search([('id', '=', 1)])
         if hospital:
             return hospital.id
-        else:
-            return
+        return
 
     name = fields.Char(string='Appointment ID',
                        required=True,

@@ -13,9 +13,9 @@
     'data': [
         'security/ir.model.access.csv',
         'data/sequence.xml',
-        'views/header.xml',
         'views/patient.xml',
-        'views/appointment.xml'
+        'views/appointment.xml',
+        'views/menu.xml'
     ],
     'qweb': [],
     "license": "AGPL-3",

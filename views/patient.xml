@@ -16,6 +16,7 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <tree string="Patients">
+                <field name="id"/>
                 <field name="name_seq"/>
                 <field name="patient_name"/>
                 <field name="patient_age"/>
@@ -32,10 +33,17 @@
         <field name="arch" type="xml">
             <form string="Patients">
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="open_patient_appointment" type="object"
+                                class="oe_stat_button" icon="fa-calendar">
+                            <field name="appointment_count" widget="statinfo"></field>
+                        </button>
+                    </div>
                     <field name="image" widget="image" class="oe_avatar"/>
                     <div class="oe_title">
                         <h1>
                             <field name="patient_name"/>
+                            <field name="id"/>
                         </h1>
                     </div>
                     <group>

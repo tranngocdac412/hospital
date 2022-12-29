@@ -6,6 +6,7 @@
         <field name="model">hospital.appointment</field>
         <field name="arch" type="xml">
             <tree string="Appointment">
+                <field name="id"/>
                 <field name="name"/>
                 <field name="patient_id"/>
                 <field name="patient_age"/>
