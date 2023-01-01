@@ -5,6 +5,12 @@ class HospitalAppointment(models.Model):
     _description = 'appointment'
     _order = 'name desc'
 
+    def action_confirm(self):
+        for record in self:
+            record.state = 'confirm'
+    def action_done(self):
+        for record in self:
+            record.state = 'done'
     def _get_default_note(self):
         return "Default note"
 
