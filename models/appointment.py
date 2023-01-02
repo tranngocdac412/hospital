@@ -39,12 +39,8 @@ class HospitalAppointment(models.Model):
                               ('cancelled', 'Cancelled')],
                              string='Status',
                              default='draft')
-    # state_check = fields.Selection([('draft', 'Draft'),
-    #                           ('confirm', 'Confirm'),
-    #                           ('done', 'Done'),
-    #                           ('cancelled', 'Cancelled')],
-    #                          string='Status',
-    #                          default='draft')
+    doctor_note = fields.Text(string='Note')
+    pharmacy_note = fields.Text(string='Note')
 
     @api.model
     def create(self, vals):

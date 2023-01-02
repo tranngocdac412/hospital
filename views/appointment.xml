@@ -44,6 +44,16 @@
                             <field name="notes"/>
                         </group>
                     </group>
+                    <notebook>
+                        <page string="Doctor Prescription">
+                            <group>
+                                <field name="doctor_note"/>
+                            </group>
+                        </page>
+                        <page string="Pharmacy">
+                            <field name="pharmacy_note"/>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

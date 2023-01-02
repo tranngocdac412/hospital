@@ -12,9 +12,16 @@
     'depends': ['base', 'mail', 'sale'],
     'data': [
         'security/ir.model.access.csv',
+
         'data/sequence.xml',
+
         'views/patient.xml',
         'views/appointment.xml',
+
+        # 'reports/patient_card.xml',
+        # 'reports/report.xml',
+
+
         'views/menu.xml'
     ],
     'qweb': [],
