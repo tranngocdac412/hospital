@@ -27,7 +27,7 @@
                 <field name="id"/>
                 <field name="name_seq"/>
                 <field name="patient_name"/>
-                <field name="patient_age"/>
+                <field name="patient_age" avg="Average of ages"/>
                 <field name="age_group"/>
                 <field name="gender"/>
                 <field name="notes"/>
