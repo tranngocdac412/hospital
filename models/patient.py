@@ -51,6 +51,7 @@ class HospitalPatient(models.Model):
                            index=True,
                            default=lambda self: _('New'))
     appointment_count = fields.Integer(string='Appointments', compute='get_appointment_count')
+    active = fields.Boolean(string='Active', default=True)
 
     @api.model
     def create(self, vals):
