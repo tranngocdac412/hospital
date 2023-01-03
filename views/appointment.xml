@@ -24,7 +24,7 @@
                 <header>
                     <button name="action_confirm" type="object" string="Confirm" states="draft" class="oe_highlight"/>
                     <button name="action_done" type="object" string="Done" states="confirm" class="oe_highlight"/>
-                    <field name="state" widget="statusbar"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
                 </header>
                 <sheet>
                     <div class="oe_title">
