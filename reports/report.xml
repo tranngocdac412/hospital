@@ -5,6 +5,7 @@
             string="Patient Card"
             model="hospital.patient"
             report_type="qweb-pdf"
+            
             name="hospital.report_patient"
             file="hospital.report_patient"/>
 </odoo>

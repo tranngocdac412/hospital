@@ -18,8 +18,8 @@
         'views/patient.xml',
         'views/appointment.xml',
 
-        # 'reports/patient_card.xml',
-        # 'reports/report.xml',
+        'reports/patient_card.xml',
+        'reports/report.xml',
 
 
         'views/menu.xml'
