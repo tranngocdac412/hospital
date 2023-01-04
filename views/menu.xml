@@ -5,4 +5,5 @@
     <menuitem id="hospital_patient" name="Patients" parent="hospital_root" action="action_patient"/>
     <menuitem id="hospital_appointment" name="Appointments" parent="hospital_root" action="action_appointment"/>
     <menuitem id="hospital_doctor" name="Doctors" parent="hospital_root" action="action_doctor"/>
+    <menuitem id="create_appointment_wizards" name="Create appointment" parent="hospital_root" action="create_appointment_wizard"/>
 </odoo>
