@@ -11,6 +11,7 @@
     "description": '',
     'depends': ['base', 'mail', 'sale'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
 
         'data/data.xml',
@@ -18,6 +19,7 @@
 
         'views/patient.xml',
         'views/appointment.xml',
+        'views/doctor.xml',
 
         'reports/patient_card.xml',
         'reports/report.xml',

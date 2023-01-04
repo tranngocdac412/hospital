@@ -4,4 +4,5 @@
     <menuitem id="hospital_root" name="Hospital" sequence="0" web_icon="hospital,static/description/icon.png"/>
     <menuitem id="hospital_patient" name="Patients" parent="hospital_root" action="action_patient"/>
     <menuitem id="hospital_appointment" name="Appointments" parent="hospital_root" action="action_appointment"/>
+    <menuitem id="hospital_doctor" name="Doctors" parent="hospital_root" action="action_doctor"/>
 </odoo>
