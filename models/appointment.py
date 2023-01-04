@@ -41,6 +41,7 @@ class HospitalAppointment(models.Model):
                              default='draft')
     doctor_note = fields.Text(string='Note')
     pharmacy_note = fields.Text(string='Note')
+    appointment_lines = fields.One2many('hospital.appointment.lines', 'appointment_id', string='Appointment Lines')
 
     @api.model
     def create(self, vals):
@@ -49,3 +50,10 @@ class HospitalAppointment(models.Model):
         result = super(HospitalAppointment, self).create(vals)
         return result
 
+class HospitalAppoinmentLines(models.Model):
+    _name = 'hospital.appointment.lines'
+    _description = 'Appointment Lines'
+
+    product_id = fields.Many2one('product.product', string='Medicine')
+    product_qty = fields.Integer(string='Quantity')
+    appointment_id = fields.Many2one('hospital.appointment', string='Appointment ID')
