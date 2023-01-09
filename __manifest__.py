@@ -26,7 +26,6 @@
         'reports/patient_card.xml',
         'reports/report.xml',
 
-
         'views/menu.xml'
     ],
     'qweb': [],
