@@ -53,6 +53,8 @@ class HospitalPatient(models.Model):
     appointment_count = fields.Integer(string='Appointments', compute='get_appointment_count')
     active = fields.Boolean(string='Active', default=True)
     doctor_id = fields.Many2one('hospital.doctor', string='Doctor')
+    user_id = fields.Many2one('res.users', string='PRO')
+    email = fields.Char(string='Email')
 
     @api.model
     def create(self, vals):
