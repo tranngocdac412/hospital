@@ -37,6 +37,11 @@ class HospitalPatient(models.Model):
             count = record.env['hospital.appointment'].search_count([('patient_id', '=', self.id)])
             record.appointment_count = count
 
+    def action_send_card(self):
+        template_id = self.env.ref('hospital.patient_card_email_template').id
+        template = self.env['mail.template'].browse(template_id)
+        template.send_mail(self.id, force_send=True)
+
     patient_name = fields.Char('Name', required=True)
     patient_age = fields.Integer('Age', track_visibility='always')
     age_group = fields.Selection([('major', 'Major'), ('minor', 'Minor')], 'Age Group', compute='_compute_age_group')
