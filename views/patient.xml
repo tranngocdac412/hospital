@@ -76,7 +76,7 @@
                         </group>
                         <group>
 <!--                            <field name="appointment_count" string="ACount"/>-->
-                            <field name="name"/>
+                            <field name="name" groups="hospital.group_hospital_doctor"/>
                             <field name="age_group"/>
                             <field name="name_seq"/>
                         </group>
